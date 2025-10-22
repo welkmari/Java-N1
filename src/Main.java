@@ -2,17 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Criação do objeto café
+        Cafe meuCafe = new Cafe("Expresso", "Pequeno", 5.50);
 
-        //cria o leitor do terminal
-        Scanner entrada = new Scanner(System.in);
-
-        int g;
-        System.out.print("Digite um valor para 'g':");
-        //le o valor digitado e armazena em "g"
-        g = entrada.nextInt();
-
-        System.out.println("O valor de 'g' é:" + g);
-
+        // Usando os métodos
+        meuCafe.preparar();
+        meuCafe.servir();
     }
 }
 
