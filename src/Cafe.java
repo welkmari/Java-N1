@@ -4,23 +4,21 @@ public class Cafe {
     String tipo;
     String tamanho;
     double preco;
-
-    //inicializa o objeto
-    public Cafe(String tipo, String tamanho, double preco){
-        this.tipo = tipo;
-        this.tamanho = tamanho;
-        this.preco = preco;
-    }
+    int quantidade;
+    int consumo;
 
     //métodos = São as ações do Café
 
     public void preparar(){
-        System.out.println("Preparando um café" + tipo + "tamanho" + tamanho + "...");
+        System.out.println("Preparando um café" + this.tipo + "tamanho" + this.tamanho + "...");
+        System.out.print("Quantidade atual:" + this.quantidade);
 
     }
     public void servir(){
-        System.out.println("Servindo o café. Valor: R$" +preco);
+        System.out.println("Servindo o café. Valor: R$" +this.preco);
     }
 
-
+    public void diminuirQuantidade(){
+        System.out.println("A quantidade de café é de:" + (this.quantidade - this.consumo));
+    }
 }
